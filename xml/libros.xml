@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE libros SYSTEM "libros.dtd">
+<libros>
+    <libro>
+        <id>1</id>
+        <titulo>El Principito</titulo>
+        <autor>Antoine de Saint-Exupéry</autor>
+        <categoria>Literatura</categoria>
+        <anio>1943</anio>
+        <editorial>Reynal &amp; Hitchcock</editorial>
+        <descripcion>Un relato sobre la amistad, la imaginación y la forma en que las personas ven el mundo.</descripcion>
+        <portada>imagenes/elprincipito.jpg</portada>
+    </libro>
+    <libro>
+        <id>2</id>
+        <titulo>Cien años de soledad</titulo>
+        <autor>Gabriel García Márquez</autor>
+        <categoria>Literatura</categoria>
+        <anio>1967</anio>
+        <editorial>Sudamericana</editorial>
+        <descripcion>Una novela que narra la historia de la familia Buendía y el pueblo de Macondo.</descripcion>
+        <portada>imagenes/cienaniosdesoledad.jpg</portada>
+    </libro>
+    <libro>
+        <id>3</id>
+        <titulo>Breve historia del tiempo</titulo>
+        <autor>Stephen Hawking</autor>
+        <categoria>Ciencia</categoria>
+        <anio>1988</anio>
+        <editorial>Bantam Books</editorial>
+        <descripcion>Un libro de divulgación científica sobre el universo, el tiempo y los agujeros negros.</descripcion>
+        <portada>imagenes/brevehistoriadeltiempo.jpg</portada>
+    </libro>
+    <libro>
+        <id>4</id>
+        <titulo>Clean Code</titulo>
+        <autor>Robert C. Martin</autor>
+        <categoria>Tecnología</categoria>
+        <anio>2008</anio>
+        <editorial>Prentice Hall</editorial>
+        <descripcion>Una guía sobre buenas prácticas para escribir código claro, ordenado y fácil de mantener.</descripcion>
+        <portada>imagenes/cleancode.jpg</portada>
+    </libro>
+    <libro>
+        <id>5</id>
+        <titulo>Sapiens</titulo>
+        <autor>Yuval Noah Harari</autor>
+        <categoria>Historia</categoria>
+        <anio>2011</anio>
+        <editorial>Debate</editorial>
+        <descripcion>Un recorrido por la historia de la humanidad, desde los primeros seres humanos hasta la actualidad.</descripcion>
+        <portada>imagenes/sapiens.jpg</portada>
+    </libro>
+</libros>
