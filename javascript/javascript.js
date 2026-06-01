@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function(){
     cargarCatalogo();
     cargarDetalleLibro();
     cargarAutores();
+    cargarCategorias();
 });
 function cargarCatalogo(){
     const contenedor = document.getElementById("lista-libros");
@@ -125,5 +126,37 @@ function cargarAutores(){
     .catch(function(error){
         contenedor.innerHTML = "<p>No se pudieron cargar los autores.</p>";
         console.log("Error al cargar autores:", error);
+    });
+}
+function cargarCategorias(){
+    const contenedor = document.getElementById("lista-categorias");
+    if(!contenedor){
+        return;
+    }
+    fetch("xml/libros.xml")
+    .then(function(respuesta){
+        return respuesta.text();
+    })
+    .then(function(datos){
+        const parser = new DOMParser();
+        const xml = parser.parseFromString(datos, "text/xml");
+        const libros = xml.getElementsByTagName("libro");
+        for(let i=0; i<libros.length; i++){
+            const categoria = libros[i].getElementsByTagName("categoria")[0].textContent;
+            const titulo = libros[i].getElementsByTagName("titulo")[0].textContent;
+            const autor = libros[i].getElementsByTagName("autor")[0].textContent;
+            const tarjeta = document.createElement("div");
+            tarjeta.classList.add("tarjeta-categoria");
+            tarjeta.innerHTML = `
+                <h3>${categoria}</h3>
+                <p><strong>Libro:</strong> ${titulo}</p>
+                <p><strong>Autor:</strong> ${autor}</p>
+            `;
+            contenedor.appendChild(tarjeta);
+        }
+    })
+    .catch(function(error){
+        contenedor.innerHTML = "<p>No se pudieron cargar las categorías.</p>";
+        console.log("Error al cargar categorías:", error);
     });
 }
