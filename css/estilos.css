@@ -121,3 +121,35 @@ footer{
 .boton-detalle:hover{
     background-color: #004b8d;
 }
+
+.detalle-contenido{
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    text-align: left;
+    margin-top: 25px;
+}
+
+.detalle-contenido img{
+    width: 180px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
+}
+
+.detalle-texto{
+    flex: 1;
+}
+
+.detalle-texto h3{
+    color: #004b8d;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.detalle-texto p{
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
