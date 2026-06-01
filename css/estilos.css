@@ -153,3 +153,31 @@ footer{
     line-height: 1.6;
     margin-bottom: 10px;
 }
+
+.lista-autores{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+    margin-top: 30px;
+}
+
+.tarjeta-autor{
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-top: 5px solid #00723f;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.10);
+}
+
+.tarjeta-autor h3{
+    color: #004b8d;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.tarjeta-autor p{
+    font-size: 16px;
+    margin-bottom: 8px;
+}
