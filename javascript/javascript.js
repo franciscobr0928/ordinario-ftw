@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function(){
     cargarDetalleLibro();
     cargarAutores();
     cargarCategorias();
+    cargarFavoritos();
 });
 function cargarCatalogo(){
     const contenedor = document.getElementById("lista-libros");
@@ -33,6 +34,7 @@ function cargarCatalogo(){
                 <p><strong>Categoría:</strong> ${categoria}</p>
                 <p><strong>Año:</strong> ${anio}</p>
                 <a href="detalle.html?id=${id}" class="boton-detalle">Ver detalle</a>
+                <button class="boton-favorito" onclick="agregarFavorito('${id}')">Agregar a favoritos</button>
             `;
             contenedor.appendChild(tarjeta);
         }
@@ -159,4 +161,68 @@ function cargarCategorias(){
         contenedor.innerHTML = "<p>No se pudieron cargar las categorías.</p>";
         console.log("Error al cargar categorías:", error);
     });
+}
+function agregarFavorito(id){
+    let favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
+    if(!favoritos.includes(id)){
+        favoritos.push(id);
+        localStorage.setItem("favoritos", JSON.stringify(favoritos));
+        alert("Libro agregado a favoritos.");
+    } else {
+        alert("Este libro ya está en favoritos.");
+    }
+}
+function cargarFavoritos(){
+    const contenedor = document.getElementById("lista-favoritos");
+    if(!contenedor){
+        return;
+    }
+    const favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
+    if(favoritos.length === 0){
+        contenedor.innerHTML = "<p>No tienes libros favoritos agregados.</p>";
+        return;
+    }
+    fetch("xml/libros.xml")
+    .then(function(respuesta){
+        return respuesta.text();
+    })
+    .then(function(datos){
+        const parser = new DOMParser();
+        const xml = parser.parseFromString(datos, "text/xml");
+        const libros = xml.getElementsByTagName("libro");
+        for(let i=0; i<libros.length; i++){
+            const id = libros[i].getElementsByTagName("id")[0].textContent;
+            if(favoritos.includes(id)){
+                const titulo = libros[i].getElementsByTagName("titulo")[0].textContent;
+                const autor = libros[i].getElementsByTagName("autor")[0].textContent;
+                const categoria = libros[i].getElementsByTagName("categoria")[0].textContent;
+                const anio = libros[i].getElementsByTagName("anio")[0].textContent;
+                const portada = libros[i].getElementsByTagName("portada")[0].textContent;
+                const tarjeta = document.createElement("div");
+                tarjeta.classList.add("tarjeta-libro");
+                tarjeta.innerHTML = `
+                    <img src="${portada}" alt="Portada de ${titulo}">
+                    <h3>${titulo}</h3>
+                    <p><strong>Autor:</strong> ${autor}</p>
+                    <p><strong>Categoría:</strong> ${categoria}</p>
+                    <p><strong>Año:</strong> ${anio}</p>
+                    <a href="detalle.html?id=${id}" class="boton-detalle">Ver detalle</a>
+                    <button class="boton-favorito" onclick="eliminarFavorito('${id}')">Eliminar de favoritos</button>
+                `;
+                contenedor.appendChild(tarjeta);
+            }
+        }
+    })
+    .catch(function(error){
+        contenedor.innerHTML = "<p>No se pudieron cargar los favoritos.</p>";
+        console.log("Error al cargar favoritos:", error);
+    });
+}
+function eliminarFavorito(id){
+    let favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
+    favoritos = favoritos.filter(function(favorito){
+        return favorito !== id;
+    });
+    localStorage.setItem("favoritos", JSON.stringify(favoritos));
+    location.reload();
 }
