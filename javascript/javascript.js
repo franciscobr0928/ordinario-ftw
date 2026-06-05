@@ -279,3 +279,16 @@ function enviarComentario(){
     mensaje.textContent = "Gracias por tu comentario.";
     comentario.value = "";
 }
+const elementosAnimados = document.querySelectorAll(".animado");
+const observador = new IntersectionObserver(function(entradas){
+    entradas.forEach(function(entrada){
+        if(entrada.isIntersecting){
+            entrada.target.classList.add("visible");
+        }
+    });
+}, {
+    threshold: 0.2
+});
+elementosAnimados.forEach(function(elemento){
+    observador.observe(elemento);
+});

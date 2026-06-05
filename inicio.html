@@ -11,19 +11,149 @@
         <h1>Biblioteca Digital UV</h1>
         <p>Un espacio digital para explorar nuevas lecturas y elevar tu conocimiento</p>
     </header>
-    <nav>
+    <nav class="menu-principal">
         <a href="inicio.html">Inicio</a>
-        <a href="catalogo.html">Catálogo</a>
-        <a href="autores.html">Autores</a>
-        <a href="categorias.html">Categorías</a>
-        <a href="favoritos.html">Favoritos</a>
-        <a href="contacto.html">Contacto</a>
+        <div class="nav-item">
+            <a href="catalogo.html">Catálogo</a>
+            <div class="mega-menu mega-menu-pequeno">
+                <div class="mega-columna">
+                    <h3>Catálogo de libros</h3>
+                    <p>Explora los títulos disponibles dentro de la Biblioteca Digital UV.</p>
+                </div>
+                <div class="mega-columna">
+                    <h4>Libros destacados</h4>
+                    <a href="detalle.html?id=1">El Principito</a>
+                    <a href="detalle.html?id=2">Cien años de soledad</a>
+                    <a href="detalle.html?id=3">Breve historia del tiempo</a>
+                    <a href="catalogo.html">Ver catálogo completo</a>
+                </div>
+            </div>
+        </div>
+        <div class="nav-item">
+            <a href="autores.html">Autores</a>
+            <div class="mega-menu mega-menu-pequeno">
+                <div class="mega-columna">
+                    <h3>Autores</h3>
+                    <p>Consulta los autores registrados y las obras relacionadas con cada uno.</p>
+                </div>
+                <div class="mega-columna">
+                    <h4>Autores disponibles</h4>
+                    <a href="autores.html">Antoine de Saint-Exupéry</a>
+                    <a href="autores.html">Gabriel García Márquez</a>
+                    <a href="autores.html">Stephen Hawking</a>
+                    <a href="autores.html">Robert C. Martin</a>
+                </div>
+            </div>
+        </div>
+        <div class="nav-item">
+            <a href="categorias.html">Categorías</a>
+            <div class="mega-menu mega-menu-pequeno">
+                <div class="mega-columna">
+                    <h3>Categorías</h3>
+                    <p>Encuentra libros organizados por áreas de interés y temas de lectura.</p>
+                </div>
+                <div class="mega-columna">
+                    <h4>Explorar por tema</h4>
+                    <a href="categorias.html">Literatura</a>
+                    <a href="categorias.html">Ciencia</a>
+                    <a href="categorias.html">Tecnología</a>
+                    <a href="categorias.html">Historia</a>
+                </div>
+            </div>
+        </div>
+        <div class="nav-item">
+            <a href="favoritos.html">Favoritos</a>
+            <div class="mega-menu mega-menu-pequeno">
+                <div class="mega-columna">
+                    <h3>Favoritos</h3>
+                    <p>Guarda libros de interés para consultarlos después desde tu navegador.</p>
+                </div>
+                <div class="mega-columna">
+                    <h4>Acciones rápidas</h4>
+                    <a href="catalogo.html">Agregar libros</a>
+                    <a href="favoritos.html">Ver favoritos guardados</a>
+                </div>
+            </div>
+        </div>
+        <div class="nav-item">
+            <a href="contacto.html">Contacto</a>
+            <div class="mega-menu mega-menu-pequeno">
+                <div class="mega-columna">
+                    <h3>Contacto</h3>
+                    <p>Consulta información general y envía un comentario visual desde la página.</p>
+                </div>
+                <div class="mega-columna">
+                    <h4>Información</h4>
+                    <a href="contacto.html">Datos de la biblioteca</a>
+                    <a href="contacto.html">Formulario de comentarios</a>
+                </div>
+            </div>
+        </div>
     </nav>
     <main>
-        <section class="contenedor">
-            <h2>Bienvenido a la Biblioteca Digital UV</h2>
-            <p>Explora una colección de libros, autores destacados y categorías de interés.</p>
-            <p>Títulos de literatura, ciencia, historia, tecnología y otras áreas pensadas para apoyar el aprendizaje y la curiosidad de cada lector.</p>
+        <section class="hero-inicio animado">
+            <div class="hero-texto">
+                <span class="etiqueta">Biblioteca Digital UV</span>
+                <h2>Explora lecturas que impulsan el conocimiento</h2>
+                <p>
+                    Descubre libros, autores y categorías pensadas para estudiantes,
+                    lectores curiosos y personas que buscan aprender algo nuevo cada día.
+                </p>
+                <a href="catalogo.html" class="boton-principal">Explorar catálogo</a>
+            </div>
+            <div class="hero-imagen">
+                <img src="imagenes/elprincipito.jpg" alt="Portada del libro El Principito">
+                <img src="imagenes/cienaniosdesoledad.jpg" alt="Portada del libro Cien años de soledad">
+                <img src="imagenes/sapiens.jpg" alt="Portada del libro Sapiens">
+            </div>
+        </section>
+        <section class="seccion-inicio animado">
+            <h2>Lecturas destacadas</h2>
+            <p>Una selección de títulos para comenzar tu recorrido por la biblioteca.</p>
+            <div class="grid-inicio">
+                <article class="tarjeta-inicio">
+                    <img src="imagenes/elprincipito.jpg" alt="Portada de El Principito">
+                    <h3>El Principito</h3>
+                    <p>Una historia breve, profunda y llena de reflexión.</p>
+                </article>
+                <article class="tarjeta-inicio">
+                    <img src="imagenes/brevehistoriadeltiempo.jpg" alt="Portada de Breve historia del tiempo">
+                    <h3>Breve historia del tiempo</h3>
+                    <p>Una mirada accesible al universo, el tiempo y la ciencia.</p>
+                </article>
+                <article class="tarjeta-inicio">
+                    <img src="imagenes/cleancode.jpg" alt="Portada de Clean Code">
+                    <h3>Clean Code</h3>
+                    <p>Un libro ideal para mejorar la forma de escribir código.</p>
+                </article>
+            </div>
+        </section>
+        <section class="seccion-inicio animado">
+            <h2>Novedades y recomendaciones</h2>
+            <p>Contenido pensado para acercarte a nuevas ideas y temas de lectura.</p>
+            <div class="bloques-noticias">
+                <article class="noticia">
+                    <h3>Lectura académica</h3>
+                    <p>
+                        Explora libros que apoyan el aprendizaje en áreas como ciencia,
+                        tecnología, historia y literatura.
+                    </p>
+                </article>
+                <article class="noticia">
+                    <h3>Autores destacados</h3>
+                    <p>
+                        Consulta autores reconocidos y conoce las obras disponibles
+                        dentro del catálogo digital.
+                    </p>
+                </article>
+                <article class="noticia">
+                    <h3>Categorías disponibles</h3>
+                    <p>
+                        Navega por categorías para encontrar libros relacionados con
+                        tus intereses personales o académicos.
+                    </p>
+                </article>
+            </div>
         </section>
     </main>
     <footer>
