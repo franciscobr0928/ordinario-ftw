@@ -94,6 +94,17 @@
         <section class="contenedor">
             <h2>Catálogo de libros</h2>
             <p>Consulta los libros disponibles en la biblioteca.</p>
+            <div class="barra-filtros">
+                <input type="text" id="busqueda-libro" placeholder="Buscar por título, autor, categoría o año">
+                <select id="orden-libro">
+                    <option value="normal">Orden normal</option>
+                    <option value="titulo">Título A-Z</option>
+                    <option value="autor">Autor A-Z</option>
+                    <option value="categoria">Categoría A-Z</option>
+                    <option value="anio-menor">Año menor a mayor</option>
+                    <option value="anio-mayor">Año mayor a menor</option>
+                </select>
+            </div>
             <div id="lista-libros" class="lista-libros"></div>
         </section>
     </main>

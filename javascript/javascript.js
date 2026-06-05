@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function(){
     cargarFavoritos();
     iniciarCarrusel();
 });
+let librosCatalogo = [];
 function cargarCatalogo(){
     const contenedor = document.getElementById("lista-libros");
     if(!contenedor){
@@ -19,31 +20,92 @@ function cargarCatalogo(){
         const parser = new DOMParser();
         const xml = parser.parseFromString(datos,"text/xml");
         const libros = xml.getElementsByTagName("libro");
+        librosCatalogo = [];
         for(let i=0;i<libros.length; i++){
-            const id = libros[i].getElementsByTagName("id")[0].textContent;
-            const titulo = libros[i].getElementsByTagName("titulo")[0].textContent;
-            const autor = libros[i].getElementsByTagName("autor")[0].textContent;
-            const categoria = libros[i].getElementsByTagName("categoria")[0].textContent;
-            const anio = libros[i].getElementsByTagName("anio")[0].textContent;
-            const portada = libros[i].getElementsByTagName("portada")[0].textContent;
-            const tarjeta = document.createElement("div");
-            tarjeta.classList.add("tarjeta-libro");
-            tarjeta.innerHTML = `
-                <img src="${portada}" alt="Portada de ${titulo}">
-                <h3>${titulo}</h3>
-                <p><strong>Autor:</strong> ${autor}</p>
-                <p><strong>Categoría:</strong> ${categoria}</p>
-                <p><strong>Año:</strong> ${anio}</p>
-                <a href="detalle.html?id=${id}" class="boton-detalle">Ver detalle</a>
-                <button class="boton-favorito" onclick="agregarFavorito('${id}')">Agregar a favoritos</button>
-            `;
-            contenedor.appendChild(tarjeta);
+            const libro = {
+                id: libros[i].getElementsByTagName("id")[0].textContent,
+                titulo: libros[i].getElementsByTagName("titulo")[0].textContent,
+                autor: libros[i].getElementsByTagName("autor")[0].textContent,
+                categoria: libros[i].getElementsByTagName("categoria")[0].textContent,
+                anio: libros[i].getElementsByTagName("anio")[0].textContent,
+                portada: libros[i].getElementsByTagName("portada")[0].textContent
+            };
+            librosCatalogo.push(libro);
         }
+        mostrarLibros(librosCatalogo);
+        activarFiltrosCatalogo();
     })
     .catch(function(error){
         contenedor.innerHTML = "<p>No se pudo cargar el catálogo de libros.</p>";
         console.log("Error al cargar XML:", error);
     });
+}
+function mostrarLibros(libros){
+    const contenedor = document.getElementById("lista-libros");
+    contenedor.innerHTML = "";
+    if(libros.length === 0){
+        contenedor.innerHTML = "<p>No se encontraron libros con esa búsqueda.</p>";
+        return;
+    }
+    for(let i=0;i<libros.length;i++){
+        const tarjeta = document.createElement("div");
+        tarjeta.classList.add("tarjeta-libro");
+        tarjeta.innerHTML = `
+            <img src="${libros[i].portada}" alt="Portada del libro ${libros[i].titulo}">
+            <h3>${libros[i].titulo}</h3>
+            <p><strong>Autor:</strong> ${libros[i].autor}</p>
+            <p><strong>Categoría:</strong> ${libros[i].categoria}</p>
+            <p><strong>Año:</strong> ${libros[i].anio}</p>
+            <a href="detalle.html?id=${libros[i].id}" class="boton-detalle">Ver detalle</a>
+            <button class="boton-favorito" onclick="agregarFavorito('${libros[i].id}')">Agregar a favoritos</button>
+        `;
+        contenedor.appendChild(tarjeta);
+    }
+}
+function activarFiltrosCatalogo(){
+    const busqueda = document.getElementById("busqueda-libro");
+    const orden = document.getElementById("orden-libro");
+    if(!busqueda || !orden){
+        return;
+    }
+    busqueda.addEventListener("input", filtrarCatalogo);
+    orden.addEventListener("change", filtrarCatalogo);
+}
+function filtrarCatalogo(){
+    const texto = document.getElementById("busqueda-libro").value.toLowerCase();
+    const orden = document.getElementById("orden-libro").value;
+    let resultado = librosCatalogo.filter(function(libro){
+        return libro.titulo.toLowerCase().includes(texto) ||
+               libro.autor.toLowerCase().includes(texto) ||
+               libro.categoria.toLowerCase().includes(texto) ||
+               libro.anio.toLowerCase().includes(texto);
+    });
+    if(orden === "titulo"){
+        resultado.sort(function(a,b){
+            return a.titulo.localeCompare(b.titulo);
+        });
+    }
+    if(orden === "autor"){
+        resultado.sort(function(a,b){
+            return a.autor.localeCompare(b.autor);
+        });
+    }
+    if(orden === "categoria"){
+        resultado.sort(function(a,b){
+            return a.categoria.localeCompare(b.categoria);
+        });
+    }
+    if(orden === "anio-menor"){
+        resultado.sort(function(a,b){
+            return Number(a.anio) - Number(b.anio);
+        });
+    }
+    if(orden === "anio-mayor"){
+        resultado.sort(function(a,b){
+            return Number(b.anio) - Number(a.anio);
+        });
+    }
+    mostrarLibros(resultado);
 }
 function cargarDetalleLibro(){
     const contenedor = document.getElementById("detalle-libro");
