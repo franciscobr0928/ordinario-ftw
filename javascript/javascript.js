@@ -226,3 +226,16 @@ function eliminarFavorito(id){
     localStorage.setItem("favoritos", JSON.stringify(favoritos));
     location.reload();
 }
+function enviarComentario(){
+    const comentario = document.getElementById("comentario");
+    const mensaje = document.getElementById("mensaje-comentario");
+    if(!comentario || !mensaje){
+        return;
+    }
+    if(comentario.value.trim() === ""){
+        mensaje.textContent = "Por favor escribe un comentario antes de enviar.";
+        return;
+    }
+    mensaje.textContent = "Gracias por tu comentario.";
+    comentario.value = "";
+}
