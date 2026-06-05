@@ -107,6 +107,48 @@
                 <img src="imagenes/sapiens.jpg" alt="Portada del libro Sapiens">
             </div>
         </section>
+        <section class="seccion-carrusel animado">
+            <div class="encabezado-carrusel">
+                <span class="etiqueta">Novedades literarias</span>
+                <h2>Actualidad, lectura y conocimiento</h2>
+                <p>Explora noticias, recomendaciones y temas destacados relacionados con el mundo de los libros.</p>
+            </div>
+            <div class="carrusel">
+                <button class="boton-carrusel" onclick="moverCarrusel(-1)">&#10094;</button>
+                <div class="carrusel-contenedor">
+                    <article class="noticia-carrusel activa">
+                        <div class="noticia-texto">
+                            <h3>La lectura digital sigue creciendo</h3>
+                            <p>Las bibliotecas digitales se han convertido en espacios clave para consultar libros, autores y recursos académicos desde cualquier lugar.</p>
+                            <a href="catalogo.html" class="boton-principal">Explorar libros</a>
+                        </div>
+                        <img src="imagenes/sapiens.jpg" alt="Libro destacado sobre historia">
+                    </article>
+                    <article class="noticia-carrusel">
+                        <div class="noticia-texto">
+                            <h3>Autores que siguen marcando generaciones</h3>
+                            <p>Obras como El Principito y Cien años de soledad continúan siendo referentes dentro de la literatura universal.</p>
+                            <a href="autores.html" class="boton-principal">Ver autores</a>
+                        </div>
+                        <img src="imagenes/elprincipito.jpg" alt="Portada del libro El Principito">
+                    </article>
+                    <article class="noticia-carrusel">
+                        <div class="noticia-texto">
+                            <h3>Ciencia y tecnología en la biblioteca</h3>
+                            <p>Los libros de divulgación científica y programación ayudan a comprender mejor el mundo actual y sus avances.</p>
+                            <a href="categorias.html" class="boton-principal">Ver categorías</a>
+                        </div>
+                        <img src="imagenes/cleancode.jpg" alt="Portada del libro Clean Code">
+                    </article>
+                </div>
+                <button class="boton-carrusel" onclick="moverCarrusel(1)">&#10095;</button>
+            </div>
+            <div class="indicadores-carrusel">
+                <button onclick="mostrarNoticia(0)" class="indicador activo"></button>
+                <button onclick="mostrarNoticia(1)" class="indicador"></button>
+                <button onclick="mostrarNoticia(2)" class="indicador"></button>
+            </div>
+        </section>
         <section class="seccion-inicio animado">
             <h2>Lecturas destacadas</h2>
             <p>Una selección de títulos para comenzar tu recorrido por la biblioteca.</p>

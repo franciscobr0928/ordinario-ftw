@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function(){
     cargarAutores();
     cargarCategorias();
     cargarFavoritos();
+    iniciarCarrusel();
 });
 function cargarCatalogo(){
     const contenedor = document.getElementById("lista-libros");
@@ -43,7 +44,6 @@ function cargarCatalogo(){
         contenedor.innerHTML = "<p>No se pudo cargar el catálogo de libros.</p>";
         console.log("Error al cargar XML:", error);
     });
-
 }
 function cargarDetalleLibro(){
     const contenedor = document.getElementById("detalle-libro");
@@ -292,3 +292,34 @@ const observador = new IntersectionObserver(function(entradas){
 elementosAnimados.forEach(function(elemento){
     observador.observe(elemento);
 });
+let noticiaActual = 0;
+function mostrarNoticia(indice){
+    const noticias = document.querySelectorAll(".noticia-carrusel");
+    const indicadores = document.querySelectorAll(".indicador");
+    if(noticias.length === 0){
+        return;
+    }
+    noticias[noticiaActual].classList.remove("activa");
+    indicadores[noticiaActual].classList.remove("activo");
+    noticiaActual = indice;
+    if(noticiaActual < 0){
+        noticiaActual = noticias.length - 1;
+    }
+    if(noticiaActual >= noticias.length){
+        noticiaActual = 0;
+    }
+    noticias[noticiaActual].classList.add("activa");
+    indicadores[noticiaActual].classList.add("activo");
+}
+function moverCarrusel(direccion){
+    mostrarNoticia(noticiaActual + direccion);
+}
+function iniciarCarrusel(){
+    const noticias = document.querySelectorAll(".noticia-carrusel");
+    if(noticias.length === 0){
+        return;
+    }
+    setInterval(function(){
+        moverCarrusel(1);
+    }, 5000);
+}
