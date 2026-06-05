@@ -111,16 +111,36 @@ function cargarAutores(){
         const parser = new DOMParser();
         const xml = parser.parseFromString(datos, "text/xml");
         const libros = xml.getElementsByTagName("libro");
-        for(let i=0;i<libros.length;i++){
+        const autores = {};
+        for(let i = 0; i < libros.length; i++){
             const autor = libros[i].getElementsByTagName("autor")[0].textContent;
             const titulo = libros[i].getElementsByTagName("titulo")[0].textContent;
             const categoria = libros[i].getElementsByTagName("categoria")[0].textContent;
+            if(!autores[autor]){
+                autores[autor] = [];
+            }
+            autores[autor].push({
+                titulo: titulo,
+                categoria: categoria
+            });
+        }
+        for(const autor in autores){
             const tarjeta = document.createElement("div");
             tarjeta.classList.add("tarjeta-autor");
+            let listaLibros = "";
+            for(let i = 0; i < autores[autor].length; i++){
+                listaLibros += `
+                    <li>
+                        <strong>${autores[autor][i].titulo}</strong><br>
+                        <span>${autores[autor][i].categoria}</span>
+                    </li>
+                `;
+            }
             tarjeta.innerHTML = `
                 <h3>${autor}</h3>
-                <p><strong>Libro:</strong> ${titulo}</p>
-                <p><strong>Categoría:</strong> ${categoria}</p>
+                <ul class="libros-autor">
+                    ${listaLibros}
+                </ul>
             `;
             contenedor.appendChild(tarjeta);
         }
@@ -143,16 +163,36 @@ function cargarCategorias(){
         const parser = new DOMParser();
         const xml = parser.parseFromString(datos, "text/xml");
         const libros = xml.getElementsByTagName("libro");
-        for(let i=0; i<libros.length; i++){
+        const categorias = {};
+        for(let i = 0; i < libros.length; i++){
             const categoria = libros[i].getElementsByTagName("categoria")[0].textContent;
             const titulo = libros[i].getElementsByTagName("titulo")[0].textContent;
             const autor = libros[i].getElementsByTagName("autor")[0].textContent;
+            if(!categorias[categoria]){
+                categorias[categoria] = [];
+            }
+            categorias[categoria].push({
+                titulo: titulo,
+                autor: autor
+            });
+        }
+        for(const categoria in categorias){
             const tarjeta = document.createElement("div");
             tarjeta.classList.add("tarjeta-categoria");
+            let listaLibros = "";
+            for(let i = 0; i < categorias[categoria].length; i++){
+                listaLibros += `
+                    <li>
+                        <strong>${categorias[categoria][i].titulo}</strong><br>
+                        <span>${categorias[categoria][i].autor}</span>
+                    </li>
+                `;
+            }
             tarjeta.innerHTML = `
                 <h3>${categoria}</h3>
-                <p><strong>Libro:</strong> ${titulo}</p>
-                <p><strong>Autor:</strong> ${autor}</p>
+                <ul class="libros-categoria">
+                    ${listaLibros}
+                </ul>
             `;
             contenedor.appendChild(tarjeta);
         }

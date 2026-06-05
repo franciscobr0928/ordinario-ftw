@@ -259,3 +259,45 @@ footer{
     color: #00723f;
     font-weight: bold;
 }
+
+.libros-categoria{
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.libros-categoria li{
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.libros-categoria li:last-child{
+    border-bottom: none;
+}
+
+.libros-categoria span{
+    color: #555555;
+    font-size: 15px;
+}
+
+.libros-autor{
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.libros-autor li{
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.libros-autor li:last-child{
+    border-bottom: none;
+}
+
+.libros-autor span{
+    color: #555555;
+    font-size: 15px;
+}
