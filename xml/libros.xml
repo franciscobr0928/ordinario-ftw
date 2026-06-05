@@ -51,4 +51,454 @@
         <descripcion>Un recorrido por la historia de la humanidad, desde los primeros seres humanos hasta la actualidad.</descripcion>
         <portada>imagenes/sapiens.jpg</portada>
     </libro>
+    <libro>
+        <id>6</id>
+        <titulo>Don Quijote de la Mancha</titulo>
+        <autor>Miguel de Cervantes</autor>
+        <categoria>Literatura</categoria>
+        <anio>1605</anio>
+        <editorial>Varias editoriales</editorial>
+        <descripcion>Una obra clásica sobre las aventuras de un caballero idealista y su fiel acompañante.</descripcion>
+        <portada>imagenes/donquijote.jpg</portada>
+    </libro>
+    <libro>
+        <id>7</id>
+        <titulo>Orgullo y prejuicio</titulo>
+        <autor>Jane Austen</autor>
+        <categoria>Literatura</categoria>
+        <anio>1813</anio>
+        <editorial>Varias editoriales</editorial>
+        <descripcion>Una novela sobre relaciones, diferencias sociales y decisiones personales.</descripcion>
+        <portada>imagenes/orgulloyprejuicio.jpg</portada>
+    </libro>
+    <libro>
+        <id>8</id>
+        <titulo>Frankenstein</titulo>
+        <autor>Mary Shelley</autor>
+        <categoria>Literatura</categoria>
+        <anio>1818</anio>
+        <editorial>Varias editoriales</editorial>
+        <descripcion>Una historia sobre la creación, la responsabilidad y los límites de la ciencia.</descripcion>
+        <portada>imagenes/frankenstein.jpg</portada>
+    </libro>
+    <libro>
+        <id>9</id>
+        <titulo>Drácula</titulo>
+        <autor>Bram Stoker</autor>
+        <categoria>Literatura</categoria>
+        <anio>1897</anio>
+        <editorial>Varias editoriales</editorial>
+        <descripcion>Una novela gótica sobre misterio, terror y la figura del vampiro.</descripcion>
+        <portada>imagenes/dracula.jpg</portada>
+    </libro>
+    <libro>
+        <id>10</id>
+        <titulo>La metamorfosis</titulo>
+        <autor>Franz Kafka</autor>
+        <categoria>Literatura</categoria>
+        <anio>1915</anio>
+        <editorial>Varias editoriales</editorial>
+        <descripcion>Una obra breve sobre transformación, aislamiento y conflicto familiar.</descripcion>
+        <portada>imagenes/lametamorfosis.jpg</portada>
+    </libro>
+    <libro>
+        <id>11</id>
+        <titulo>1984</titulo>
+        <autor>George Orwell</autor>
+        <categoria>Literatura</categoria>
+        <anio>1949</anio>
+        <editorial>Secker &amp; Warburg</editorial>
+        <descripcion>Una novela distópica sobre vigilancia, control social y manipulación de la verdad.</descripcion>
+        <portada>imagenes/1984.jpg</portada>
+    </libro>
+    <libro>
+        <id>12</id>
+        <titulo>Rebelión en la granja</titulo>
+        <autor>George Orwell</autor>
+        <categoria>Literatura</categoria>
+        <anio>1945</anio>
+        <editorial>Secker &amp; Warburg</editorial>
+        <descripcion>Una fábula política sobre poder, corrupción y desigualdad.</descripcion>
+        <portada>imagenes/rebelionenlagranja.jpg</portada>
+    </libro>
+    <libro>
+        <id>13</id>
+        <titulo>Fahrenheit 451</titulo>
+        <autor>Ray Bradbury</autor>
+        <categoria>Literatura</categoria>
+        <anio>1953</anio>
+        <editorial>Ballantine Books</editorial>
+        <descripcion>Una novela sobre censura, libros prohibidos y pensamiento crítico.</descripcion>
+        <portada>imagenes/fahrenheit451.jpg</portada>
+    </libro>
+    <libro>
+        <id>14</id>
+        <titulo>El túnel</titulo>
+        <autor>Ernesto Sabato</autor>
+        <categoria>Literatura</categoria>
+        <anio>1948</anio>
+        <editorial>Sur</editorial>
+        <descripcion>Una novela psicológica centrada en la obsesión, la soledad y el conflicto interior.</descripcion>
+        <portada>imagenes/eltunel.jpg</portada>
+    </libro>
+    <libro>
+        <id>15</id>
+        <titulo>Rayuela</titulo>
+        <autor>Julio Cortázar</autor>
+        <categoria>Literatura</categoria>
+        <anio>1963</anio>
+        <editorial>Sudamericana</editorial>
+        <descripcion>Una novela experimental que propone diferentes formas de lectura.</descripcion>
+        <portada>imagenes/rayuela.jpg</portada>
+    </libro>
+    <libro>
+        <id>16</id>
+        <titulo>Pedro Páramo</titulo>
+        <autor>Juan Rulfo</autor>
+        <categoria>Literatura</categoria>
+        <anio>1955</anio>
+        <editorial>Fondo de Cultura Económica</editorial>
+        <descripcion>Una novela mexicana sobre memoria, muerte y voces del pasado.</descripcion>
+        <portada>imagenes/pedroparamo.jpg</portada>
+    </libro>
+    <libro>
+        <id>17</id>
+        <titulo>La sombra del viento</titulo>
+        <autor>Carlos Ruiz Zafón</autor>
+        <categoria>Literatura</categoria>
+        <anio>2001</anio>
+        <editorial>Planeta</editorial>
+        <descripcion>Una novela de misterio, libros olvidados y secretos familiares.</descripcion>
+        <portada>imagenes/lasombradelviento.jpg</portada>
+    </libro>
+    <libro>
+        <id>18</id>
+        <titulo>Los juegos del hambre</titulo>
+        <autor>Suzanne Collins</autor>
+        <categoria>Literatura</categoria>
+        <anio>2008</anio>
+        <editorial>Scholastic</editorial>
+        <descripcion>Una historia distópica sobre supervivencia, poder y resistencia.</descripcion>
+        <portada>imagenes/losjuegosdelhambre.jpg</portada>
+    </libro>
+    <libro>
+        <id>19</id>
+        <titulo>Harry Potter y la piedra filosofal</titulo>
+        <autor>J. K. Rowling</autor>
+        <categoria>Fantasía</categoria>
+        <anio>1997</anio>
+        <editorial>Bloomsbury</editorial>
+        <descripcion>El inicio de una saga sobre magia, amistad y descubrimiento personal.</descripcion>
+        <portada>imagenes/harrypotter1.jpg</portada>
+    </libro>
+    <libro>
+        <id>20</id>
+        <titulo>El Hobbit</titulo>
+        <autor>J. R. R. Tolkien</autor>
+        <categoria>Fantasía</categoria>
+        <anio>1937</anio>
+        <editorial>George Allen &amp; Unwin</editorial>
+        <descripcion>Una aventura fantástica sobre un viaje inesperado, tesoros y criaturas legendarias.</descripcion>
+        <portada>imagenes/elhobbit.jpg</portada>
+    </libro>
+    <libro>
+        <id>21</id>
+        <titulo>El señor de los anillos</titulo>
+        <autor>J. R. R. Tolkien</autor>
+        <categoria>Fantasía</categoria>
+        <anio>1954</anio>
+        <editorial>George Allen &amp; Unwin</editorial>
+        <descripcion>Una epopeya fantástica sobre amistad, valor y la lucha contra la oscuridad.</descripcion>
+        <portada>imagenes/elsenordelosanillos.jpg</portada>
+    </libro>
+    <libro>
+        <id>22</id>
+        <titulo>Crónicas de Narnia</titulo>
+        <autor>C. S. Lewis</autor>
+        <categoria>Fantasía</categoria>
+        <anio>1950</anio>
+        <editorial>Geoffrey Bles</editorial>
+        <descripcion>Una serie de historias fantásticas sobre mundos mágicos, aventura y aprendizaje.</descripcion>
+        <portada>imagenes/cronicasdenarnia.jpg</portada>
+    </libro>
+    <libro>
+        <id>23</id>
+        <titulo>Dune</titulo>
+        <autor>Frank Herbert</autor>
+        <categoria>Ciencia ficción</categoria>
+        <anio>1965</anio>
+        <editorial>Chilton Books</editorial>
+        <descripcion>Una novela de ciencia ficción sobre política, poder, ecología y destino.</descripcion>
+        <portada>imagenes/dune.jpg</portada>
+    </libro>
+    <libro>
+        <id>24</id>
+        <titulo>Fundación</titulo>
+        <autor>Isaac Asimov</autor>
+        <categoria>Ciencia ficción</categoria>
+        <anio>1951</anio>
+        <editorial>Gnome Press</editorial>
+        <descripcion>Una historia sobre civilizaciones futuras, conocimiento y predicción social.</descripcion>
+        <portada>imagenes/fundacion.jpg</portada>
+    </libro>
+    <libro>
+        <id>25</id>
+        <titulo>Yo, robot</titulo>
+        <autor>Isaac Asimov</autor>
+        <categoria>Ciencia ficción</categoria>
+        <anio>1950</anio>
+        <editorial>Gnome Press</editorial>
+        <descripcion>Una colección de relatos sobre robots, inteligencia artificial y ética tecnológica.</descripcion>
+        <portada>imagenes/yorobot.jpg</portada>
+    </libro>
+    <libro>
+        <id>26</id>
+        <titulo>Neuromante</titulo>
+        <autor>William Gibson</autor>
+        <categoria>Ciencia ficción</categoria>
+        <anio>1984</anio>
+        <editorial>Ace Books</editorial>
+        <descripcion>Una novela cyberpunk sobre tecnología, redes digitales y futuros oscuros.</descripcion>
+        <portada>imagenes/neuromante.jpg</portada>
+    </libro>
+    <libro>
+        <id>27</id>
+        <titulo>El hombre en busca de sentido</titulo>
+        <autor>Viktor Frankl</autor>
+        <categoria>Filosofía</categoria>
+        <anio>1946</anio>
+        <editorial>Varias editoriales</editorial>
+        <descripcion>Una reflexión sobre el sentido de la vida frente a situaciones extremas.</descripcion>
+        <portada>imagenes/elhombreenbuscadesentido.jpg</portada>
+    </libro>
+    <libro>
+        <id>28</id>
+        <titulo>El mundo de Sofía</titulo>
+        <autor>Jostein Gaarder</autor>
+        <categoria>Filosofía</categoria>
+        <anio>1991</anio>
+        <editorial>Aschehoug</editorial>
+        <descripcion>Una novela que introduce conceptos filosóficos a través de una historia narrativa.</descripcion>
+        <portada>imagenes/elmundodesofia.jpg</portada>
+    </libro>
+    <libro>
+        <id>29</id>
+        <titulo>Ética para Amador</titulo>
+        <autor>Fernando Savater</autor>
+        <categoria>Filosofía</categoria>
+        <anio>1991</anio>
+        <editorial>Ariel</editorial>
+        <descripcion>Un libro introductorio sobre ética, decisiones y responsabilidad personal.</descripcion>
+        <portada>imagenes/eticaparaamador.jpg</portada>
+    </libro>
+    <libro>
+        <id>30</id>
+        <titulo>Cosmos</titulo>
+        <autor>Carl Sagan</autor>
+        <categoria>Ciencia</categoria>
+        <anio>1980</anio>
+        <editorial>Random House</editorial>
+        <descripcion>Un recorrido por el universo, la ciencia y la curiosidad humana.</descripcion>
+        <portada>imagenes/cosmos.jpg</portada>
+    </libro>
+    <libro>
+        <id>31</id>
+        <titulo>El gen egoísta</titulo>
+        <autor>Richard Dawkins</autor>
+        <categoria>Ciencia</categoria>
+        <anio>1976</anio>
+        <editorial>Oxford University Press</editorial>
+        <descripcion>Una obra de divulgación sobre evolución, genes y comportamiento biológico.</descripcion>
+        <portada>imagenes/elgenegoista.jpg</portada>
+    </libro>
+    <libro>
+        <id>32</id>
+        <titulo>Una breve historia de casi todo</titulo>
+        <autor>Bill Bryson</autor>
+        <categoria>Ciencia</categoria>
+        <anio>2003</anio>
+        <editorial>Doubleday</editorial>
+        <descripcion>Un recorrido accesible por temas científicos como el universo, la Tierra y la vida.</descripcion>
+        <portada>imagenes/unabrevehistoriadecasitodo.jpg</portada>
+    </libro>
+    <libro>
+        <id>33</id>
+        <titulo>El origen de las especies</titulo>
+        <autor>Charles Darwin</autor>
+        <categoria>Ciencia</categoria>
+        <anio>1859</anio>
+        <editorial>John Murray</editorial>
+        <descripcion>Una obra fundamental sobre evolución y selección natural.</descripcion>
+        <portada>imagenes/elorigendelasespecies.jpg</portada>
+    </libro>
+    <libro>
+        <id>34</id>
+        <titulo>Homo Deus</titulo>
+        <autor>Yuval Noah Harari</autor>
+        <categoria>Historia</categoria>
+        <anio>2015</anio>
+        <editorial>Debate</editorial>
+        <descripcion>Un análisis sobre posibles futuros de la humanidad, la tecnología y la sociedad.</descripcion>
+        <portada>imagenes/homodeus.jpg</portada>
+    </libro>
+    <libro>
+        <id>35</id>
+        <titulo>Guns, Germs, and Steel</titulo>
+        <autor>Jared Diamond</autor>
+        <categoria>Historia</categoria>
+        <anio>1997</anio>
+        <editorial>W. W. Norton</editorial>
+        <descripcion>Un libro sobre factores geográficos, sociales y tecnológicos en la historia humana.</descripcion>
+        <portada>imagenes/gunsgermsandsteel.jpg</portada>
+    </libro>
+    <libro>
+        <id>36</id>
+        <titulo>Los secretos de la mente millonaria</titulo>
+        <autor>T. Harv Eker</autor>
+        <categoria>Desarrollo personal</categoria>
+        <anio>2005</anio>
+        <editorial>HarperBusiness</editorial>
+        <descripcion>Un libro sobre mentalidad financiera, hábitos y creencias relacionadas con el dinero.</descripcion>
+        <portada>imagenes/secretosmentemillonaria.jpg</portada>
+    </libro>
+    <libro>
+        <id>37</id>
+        <titulo>Hábitos atómicos</titulo>
+        <autor>James Clear</autor>
+        <categoria>Desarrollo personal</categoria>
+        <anio>2018</anio>
+        <editorial>Avery</editorial>
+        <descripcion>Una guía sobre pequeños hábitos, mejora continua y cambios personales sostenibles.</descripcion>
+        <portada>imagenes/habitosatomicos.jpg</portada>
+    </libro>
+    <libro>
+        <id>38</id>
+        <titulo>Piense y hágase rico</titulo>
+        <autor>Napoleon Hill</autor>
+        <categoria>Desarrollo personal</categoria>
+        <anio>1937</anio>
+        <editorial>The Ralston Society</editorial>
+        <descripcion>Una obra clásica sobre metas, mentalidad y crecimiento personal.</descripcion>
+        <portada>imagenes/pienseyrico.jpg</portada>
+    </libro>
+    <libro>
+        <id>39</id>
+        <titulo>El poder de los hábitos</titulo>
+        <autor>Charles Duhigg</autor>
+        <categoria>Desarrollo personal</categoria>
+        <anio>2012</anio>
+        <editorial>Random House</editorial>
+        <descripcion>Un libro sobre cómo se forman los hábitos y cómo pueden modificarse.</descripcion>
+        <portada>imagenes/elpoderdeloshabitos.jpg</portada>
+    </libro>
+    <libro>
+        <id>40</id>
+        <titulo>Los 7 hábitos de la gente altamente efectiva</titulo>
+        <autor>Stephen R. Covey</autor>
+        <categoria>Desarrollo personal</categoria>
+        <anio>1989</anio>
+        <editorial>Free Press</editorial>
+        <descripcion>Una obra sobre liderazgo personal, organización y efectividad.</descripcion>
+        <portada>imagenes/sietehabitos.jpg</portada>
+    </libro>
+    <libro>
+        <id>41</id>
+        <titulo>Introduction to Algorithms</titulo>
+        <autor>Thomas H. Cormen</autor>
+        <categoria>Tecnología</categoria>
+        <anio>1990</anio>
+        <editorial>MIT Press</editorial>
+        <descripcion>Un libro de referencia sobre algoritmos, estructuras de datos y análisis computacional.</descripcion>
+        <portada>imagenes/introductiontoalgorithms.jpg</portada>
+    </libro>
+    <libro>
+        <id>42</id>
+        <titulo>Design Patterns</titulo>
+        <autor>Erich Gamma</autor>
+        <categoria>Tecnología</categoria>
+        <anio>1994</anio>
+        <editorial>Addison-Wesley</editorial>
+        <descripcion>Un libro sobre patrones de diseño utilizados en programación orientada a objetos.</descripcion>
+        <portada>imagenes/designpatterns.jpg</portada>
+    </libro>
+    <libro>
+        <id>43</id>
+        <titulo>The Pragmatic Programmer</titulo>
+        <autor>Andrew Hunt</autor>
+        <categoria>Tecnología</categoria>
+        <anio>1999</anio>
+        <editorial>Addison-Wesley</editorial>
+        <descripcion>Una obra sobre buenas prácticas, mentalidad profesional y desarrollo de software.</descripcion>
+        <portada>imagenes/pragmaticprogrammer.jpg</portada>
+    </libro>
+    <libro>
+        <id>44</id>
+        <titulo>Code Complete</titulo>
+        <autor>Steve McConnell</autor>
+        <categoria>Tecnología</categoria>
+        <anio>1993</anio>
+        <editorial>Microsoft Press</editorial>
+        <descripcion>Un libro sobre construcción de software, calidad de código y prácticas de desarrollo.</descripcion>
+        <portada>imagenes/codecomplete.jpg</portada>
+    </libro>
+    <libro>
+        <id>45</id>
+        <titulo>JavaScript: The Good Parts</titulo>
+        <autor>Douglas Crockford</autor>
+        <categoria>Tecnología</categoria>
+        <anio>2008</anio>
+        <editorial>O'Reilly Media</editorial>
+        <descripcion>Un libro sobre las partes más útiles y elegantes del lenguaje JavaScript.</descripcion>
+        <portada>imagenes/javascriptgoodparts.jpg</portada>
+    </libro>
+    <libro>
+        <id>46</id>
+        <titulo>Learning XML</titulo>
+        <autor>Erik T. Ray</autor>
+        <categoria>Tecnología</categoria>
+        <anio>2001</anio>
+        <editorial>O'Reilly Media</editorial>
+        <descripcion>Una introducción al uso de XML, estructura de documentos y procesamiento de datos.</descripcion>
+        <portada>imagenes/learningxml.jpg</portada>
+    </libro>
+    <libro>
+        <id>47</id>
+        <titulo>HTML and CSS</titulo>
+        <autor>Jon Duckett</autor>
+        <categoria>Tecnología</categoria>
+        <anio>2011</anio>
+        <editorial>Wiley</editorial>
+        <descripcion>Una guía visual para aprender estructura HTML y estilos CSS.</descripcion>
+        <portada>imagenes/htmlandcss.jpg</portada>
+    </libro>
+    <libro>
+        <id>48</id>
+        <titulo>Eloquent JavaScript</titulo>
+        <autor>Marijn Haverbeke</autor>
+        <categoria>Tecnología</categoria>
+        <anio>2011</anio>
+        <editorial>No Starch Press</editorial>
+        <descripcion>Un libro para aprender JavaScript mediante conceptos, ejemplos y ejercicios.</descripcion>
+        <portada>imagenes/eloquentjavascript.jpg</portada>
+    </libro>
+    <libro>
+        <id>49</id>
+        <titulo>El arte de la guerra</titulo>
+        <autor>Sun Tzu</autor>
+        <categoria>Filosofía</categoria>
+        <anio>-500</anio>
+        <editorial>Varias editoriales</editorial>
+        <descripcion>Un texto clásico sobre estrategia, decisiones y pensamiento táctico.</descripcion>
+        <portada>imagenes/elartedelaguerra.jpg</portada>
+    </libro>
+    <libro>
+        <id>50</id>
+        <titulo>La República</titulo>
+        <autor>Platón</autor>
+        <categoria>Filosofía</categoria>
+        <anio>-375</anio>
+        <editorial>Varias editoriales</editorial>
+        <descripcion>Una obra filosófica sobre justicia, educación, política y organización social.</descripcion>
+        <portada>imagenes/larepublica.jpg</portada>
+    </libro>
 </libros>
