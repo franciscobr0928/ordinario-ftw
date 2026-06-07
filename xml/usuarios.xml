@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE usuarios SYSTEM "usuarios.dtd">
+<usuarios>
+    <usuario>
+        <matricula>zs24013350</matricula>
+        <contrasena>12345</contrasena>
+        <nombre>Francisco Báez Rodríguez</nombre>
+    </usuario>
+    <usuario>
+        <matricula>zs24013351</matricula>
+        <contrasena>12345</contrasena>
+        <nombre>José Rómulo Sosa Ortiz</nombre>
+    </usuario>
+    <usuario>
+        <matricula>zs24013352</matricula>
+        <contrasena>12345</contrasena>
+        <nombre>Luis Miguel Gallego Basteri</nombre>
+    </usuario>
+</usuarios>

@@ -43,7 +43,8 @@ header{
     border-bottom: 6px solid var(--verde-uv);
     box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
     position: relative;
-    overflow: hidden;
+    overflow: visible;
+    z-index: 2500;
 }
 
 header::before{
@@ -1169,5 +1170,122 @@ footer{
     .barra-filtros input,
     .barra-filtros select{
         width: 100%;
+    }
+}
+
+.datos-contacto a{
+    color: var(--azul-uv);
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.datos-contacto a:hover{
+    color: var(--verde-uv);
+    text-decoration: underline;
+}
+
+.perfil-contenedor{
+    position: absolute;
+    top: 22px;
+    right: 32px;
+    z-index: 5000;
+}
+
+.boton-perfil{
+    background-color: white;
+    color: var(--verde-uv);
+    border: 1px solid var(--borde);
+    border-radius: 999px;
+    padding: 10px 18px;
+    font-weight: 900;
+    cursor: pointer;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
+    outline: none;
+    transition: all 0.25s ease;
+}
+
+.boton-perfil:hover{
+    color: var(--azul-uv);
+    transform: translateY(-2px);
+}
+
+.boton-perfil:focus{
+    outline: none;
+}
+
+.panel-perfil{
+    position: absolute;
+    top: 58px;
+    right: 0;
+    width: 280px;
+    background-color: white;
+    border: 1px solid var(--borde);
+    border-radius: 18px;
+    padding: 18px;
+    box-shadow: 0 16px 35px rgba(0, 38, 84, 0.20);
+    display: none;
+    text-align: left;
+    z-index: 6000;
+}
+
+.panel-perfil.perfil-activo{
+    display: block;
+}
+
+.panel-perfil p{
+    color: var(--texto);
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.panel-perfil input{
+    width: 100%;
+    padding: 11px 13px;
+    margin-bottom: 10px;
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    outline: none;
+}
+
+.panel-perfil input:focus{
+    border-color: var(--azul-uv);
+    box-shadow: 0 0 0 3px rgba(0, 82, 155, 0.10);
+}
+
+.boton-login{
+    width: 100%;
+    background: linear-gradient(135deg, var(--azul-uv), var(--azul-uv-oscuro));
+    color: white;
+    border: none;
+    border-radius: 999px;
+    padding: 10px 14px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.boton-login:hover{
+    background: linear-gradient(135deg, var(--verde-uv), var(--verde-uv-oscuro));
+}
+
+#mensaje-login{
+    color: #b00020;
+    font-weight: 800;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+@media(max-width: 650px){
+    .perfil-contenedor{
+        position: static;
+        margin-bottom: 18px;
+    }
+
+    .panel-perfil{
+        top: 45px;
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }

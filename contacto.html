@@ -8,6 +8,23 @@
 </head>
 <body>
     <header>
+        <div class="perfil-contenedor">
+            <button class="boton-perfil" onclick="alternarPerfil()">Sin sesión</button>
+            <div id="panel-perfil" class="panel-perfil">
+                <div id="perfil-sin-sesion">
+                    <p><strong>Iniciar sesión</strong></p>
+                    <input type="text" id="matricula-login" placeholder="Matrícula">
+                    <input type="password" id="contrasena-login" placeholder="Contraseña">
+                    <button onclick="validarUsuario()" class="boton-login">Ingresar</button>
+                    <p id="mensaje-login"></p>
+                </div>
+                <div id="perfil-con-sesion">
+                    <p><strong id="nombre-sesion"></strong></p>
+                    <p id="matricula-sesion"></p>
+                    <button onclick="cerrarSesion()" class="boton-login">Cerrar sesión</button>
+                </div>
+            </div>
+        </div>
         <h1>Biblioteca Digital UV</h1>
         <p>Un espacio digital para explorar nuevas lecturas y elevar tu conocimiento</p>
     </header>
@@ -96,6 +113,7 @@
             <p>Biblioteca Digital UV es un espacio creado para consultar libros, autores y categorías de lectura.</p>
             <div class="datos-contacto">
                 <p><strong>Institución:</strong> Universidad Veracruzana</p>
+                <p><strong>Página oficial:</strong> <a href="https://www.uv.mx/" target="_blank">Universidad Veracruzana</a></p>
                 <p><strong>Sitio:</strong> Biblioteca Digital UV</p>
                 <p><strong>Correo:</strong> biblioteca.uv@ejemplo.com</p>
                 <p><strong>Horario de atención:</strong> Lunes a viernes de 9:00 a.m. a 6:00 p.m.</p>

@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function(){
     cargarCategorias();
     cargarFavoritos();
     iniciarCarrusel();
+    mostrarSesion();
 });
 let librosCatalogo = [];
 function cargarCatalogo(){
@@ -384,4 +385,69 @@ function iniciarCarrusel(){
     setInterval(function(){
         moverCarrusel(1);
     }, 5000);
+}
+function alternarPerfil(){
+    const panel = document.getElementById("panel-perfil");
+    if(!panel){
+        return;
+    }
+    panel.classList.toggle("perfil-activo");
+}
+function validarUsuario(){
+    const matricula = document.getElementById("matricula-login").value;
+    const contrasena = document.getElementById("contrasena-login").value;
+    const mensaje = document.getElementById("mensaje-login");
+    fetch("xml/usuarios.xml")
+    .then(function(respuesta){
+        return respuesta.text();
+    })
+    .then(function(datos){
+        const parser = new DOMParser();
+        const xml = parser.parseFromString(datos, "text/xml");
+        const usuarios = xml.getElementsByTagName("usuario");
+        for(let i=0;i<usuarios.length;i++){
+            const matriculaXml = usuarios[i].getElementsByTagName("matricula")[0].textContent;
+            const contrasenaXml = usuarios[i].getElementsByTagName("contrasena")[0].textContent;
+            const nombreXml = usuarios[i].getElementsByTagName("nombre")[0].textContent;
+            if(matricula === matriculaXml && contrasena === contrasenaXml){
+                localStorage.setItem("nombreSesion", nombreXml);
+                localStorage.setItem("matriculaSesion", matriculaXml);
+                mostrarSesion();
+                return;
+            }
+        }
+        mensaje.textContent = "Matrícula o contraseña incorrecta.";
+    })
+    .catch(function(error){
+        mensaje.textContent = "No se pudo validar el usuario.";
+        console.log("Error al validar usuario:", error);
+    });
+}
+function mostrarSesion(){
+    const nombre = localStorage.getItem("nombreSesion");
+    const matricula = localStorage.getItem("matriculaSesion");
+    const boton = document.querySelector(".boton-perfil");
+    const sinSesion = document.getElementById("perfil-sin-sesion");
+    const conSesion = document.getElementById("perfil-con-sesion");
+    const nombreSesion = document.getElementById("nombre-sesion");
+    const matriculaSesion = document.getElementById("matricula-sesion");
+    if(!boton || !sinSesion || !conSesion){
+        return;
+    }
+    if(nombre && matricula){
+        boton.textContent = nombre;
+        sinSesion.style.display = "none";
+        conSesion.style.display = "block";
+        nombreSesion.textContent = nombre;
+        matriculaSesion.textContent = "Matrícula: " + matricula;
+    } else {
+        boton.textContent = "Sin sesión";
+        sinSesion.style.display = "block";
+        conSesion.style.display = "none";
+    }
+}
+function cerrarSesion(){
+    localStorage.removeItem("nombreSesion");
+    localStorage.removeItem("matriculaSesion");
+    mostrarSesion();
 }

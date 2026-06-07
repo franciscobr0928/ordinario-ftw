@@ -1,0 +1,5 @@
+<!ELEMENT usuarios (usuario+)>
+<!ELEMENT usuario (matricula, contrasena, nombre)>
+<!ELEMENT matricula (#PCDATA)>
+<!ELEMENT contrasena (#PCDATA)>
+<!ELEMENT nombre (#PCDATA)>
